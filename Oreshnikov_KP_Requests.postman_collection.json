@@ -1,0 +1,674 @@
+{
+	"info": {
+		"_postman_id": "cff32e8a-7e0a-45fe-a345-a1929174df95",
+		"name": "Oreshnikov_KP_Requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24954130"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "Енисей",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Енисеев",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "89001234567",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "user@user.ru",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "paSSword1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://k-oreshnikov.xn--80ahdri7a.site/api/register",
+					"protocol": "http",
+					"host": [
+						"k-oreshnikov",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Courier Register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "W4iq_q3Kl3Tz9I3iu6Trc8nleBo1bfzx",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "Курьер",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Курьеров",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "83259429354",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "courier@cour.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Password",
+							"type": "text"
+						},
+						{
+							"key": "whois",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://k-oreshnikov.xn--80ahdri7a.site/api/admin/courier_reg",
+					"protocol": "http",
+					"host": [
+						"k-oreshnikov",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"admin",
+						"courier_reg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "user@user.ru",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "paSSword1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://k-oreshnikov.xn--80ahdri7a.site/api/login",
+					"protocol": "http",
+					"host": [
+						"k-oreshnikov",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Store Register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "WeNFKlzoQ_xJqnvjUZmSHDshlBlpuIOg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "store_name",
+							"value": "Магазин",
+							"type": "text"
+						},
+						{
+							"key": "store_address",
+							"value": "адрес",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://k-oreshnikov.xn--80ahdri7a.site/api/11/store/reg",
+					"protocol": "http",
+					"host": [
+						"k-oreshnikov",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"11",
+						"store",
+						"reg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Store Edit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "WeNFKlzoQ_xJqnvjUZmSHDshlBlpuIOg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "store_name",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "store_address",
+							"value": "Улица 15, дом 16",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://k-oreshnikov.xn--80ahdri7a.site/api/11/store/edit",
+					"protocol": "http",
+					"host": [
+						"k-oreshnikov",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"11",
+						"store",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Store Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "WeNFKlzoQ_xJqnvjUZmSHDshlBlpuIOg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "k-oreshnikov.сделай.site/api/11/store/delete",
+					"host": [
+						"k-oreshnikov",
+						"сделай",
+						"site"
+					],
+					"path": [
+						"api",
+						"11",
+						"store",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile Edit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "k31WnRCmnGUF7o4L0zqoEppUMyGR-nMg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "last_name",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "phone",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "profile_photo",
+							"type": "file",
+							"src": "/C:/Users/egoro/Pictures/Better Call Saul.jpg"
+						},
+						{
+							"key": "address",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://k-oreshnikov.xn--80ahdri7a.site/api/7/profile/edit",
+					"protocol": "http",
+					"host": [
+						"k-oreshnikov",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"7",
+						"profile",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "WeNFKlzoQ_xJqnvjUZmSHDshlBlpuIOg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "client_first_name",
+							"value": "Клиент",
+							"type": "text"
+						},
+						{
+							"key": "client_last_name",
+							"value": "Клиентов",
+							"type": "text"
+						},
+						{
+							"key": "client_phone",
+							"value": "83423425456",
+							"type": "text"
+						},
+						{
+							"key": "client_email",
+							"value": "client@cli.com",
+							"type": "text"
+						},
+						{
+							"key": "client_address",
+							"value": "Клиентская улица, дом 4, квартира 15",
+							"type": "text"
+						},
+						{
+							"key": "order_class",
+							"value": "light",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://k-oreshnikov.xn--80ahdri7a.site/api/4/orders/create",
+					"protocol": "http",
+					"host": [
+						"k-oreshnikov",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"4",
+						"orders",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order Show All",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "k31WnRCmnGUF7o4L0zqoEppUMyGR-nMg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://k-oreshnikov.xn--80ahdri7a.site/api/orders/show_all?order_class=medium",
+					"protocol": "http",
+					"host": [
+						"k-oreshnikov",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"orders",
+						"show_all"
+					],
+					"query": [
+						{
+							"key": "order_class",
+							"value": "medium"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order Take",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "k31WnRCmnGUF7o4L0zqoEppUMyGR-nMg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "order_id",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://k-oreshnikov.xn--80ahdri7a.site/api/7/orders/take",
+					"protocol": "http",
+					"host": [
+						"k-oreshnikov",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"7",
+						"orders",
+						"take"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order Edit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "k31WnRCmnGUF7o4L0zqoEppUMyGR-nMg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "order_id",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "order_status",
+							"value": "в пути",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://k-oreshnikov.xn--80ahdri7a.site/api/7/orders/edit_status",
+					"protocol": "http",
+					"host": [
+						"k-oreshnikov",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"7",
+						"orders",
+						"edit_status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order Show User's",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "fyZV9Vr6ZvEN7UsF9vjn-kTlTivDHGFH",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://k-oreshnikov.xn--80ahdri7a.site/api/10/orders/show_my",
+					"protocol": "http",
+					"host": [
+						"k-oreshnikov",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"10",
+						"orders",
+						"show_my"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order Show Store's",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Ft-nK9oOjAUxApOIEzWu5-t8FxlFEo1q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://k-oreshnikov.xn--80ahdri7a.site/api/3/orders/show",
+					"protocol": "http",
+					"host": [
+						"k-oreshnikov",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"3",
+						"orders",
+						"show"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "W4iq_q3Kl3Tz9I3iu6Trc8nleBo1bfzx",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "k-oreshnikov.сделай.site/api/admin/delete/13",
+					"host": [
+						"k-oreshnikov",
+						"сделай",
+						"site"
+					],
+					"path": [
+						"api",
+						"admin",
+						"delete",
+						"13"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
